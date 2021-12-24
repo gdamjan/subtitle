@@ -11,16 +11,16 @@ fn main() -> Result<()> {
             Arg::new("file")
                 .index(1)
                 .value_name("FILE(S)")
-                .about("Get subtitles for a file or multiple files.")
+                .help("Get subtitles for a file or multiple files.")
                 .takes_value(true)
-                .multiple(true),
+                .multiple_values(true),
         )
         .arg(
             Arg::new("lang")
                 .long("lang")
                 .short('l')
                 .value_name("LANGUAGE")
-                .about("The preferred language to download the subtitles in.")
+                .help("The preferred language to download the subtitles in.")
                 .takes_value(true)
                 .default_value("en"),
         )
@@ -30,7 +30,7 @@ fn main() -> Result<()> {
                 .short('d')
                 .value_name("VALUE")
                 .takes_value(false)
-                .about(
+                .help(
                     "When used, app will stop if subtitles aren't found for the selected language.",
                 ),
         )
